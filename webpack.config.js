@@ -7,7 +7,6 @@ const path = require('path'); // eslint-disable-line
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env) // eslint-disable-line
 
 module.exports = ( { mode } = { mode: 'production', presets: [] }) => {
-  console.log('>> env: ', mode);
   return webpackMerge(
     {
       mode,

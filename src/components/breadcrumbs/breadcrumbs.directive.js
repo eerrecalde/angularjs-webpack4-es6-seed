@@ -29,7 +29,7 @@
  *    angular.module('exampleModule', ['breadcrumbsModule'])
  *      .controller('exampleController', function($scope) {
  *        var ec = this;
- *        ec.breadcrumbList = [{"displayName":"Test 1","href":"http://techsoup.org/"},{"displayName":"Test 2","href":"http://techsoup.org/"}];
+ *        ec.breadcrumbList = [{"displayName":"Test 1","href":"https://google.com/"},{"displayName":"Test 2","href":"https://google.com/"}];
  *      });
  *  </file>
  * </example>

@@ -11,9 +11,7 @@
  * @requires metadataModule.metadataService
  * @requires $state
  * @requires $rootScope
- *
- * @author Emiliano Erracalde (eerrecalde@techsoupglobal.org)
- * @created 05/21/18
+ * 
  * @element
  *
  * @example

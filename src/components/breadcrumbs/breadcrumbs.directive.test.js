@@ -1,9 +1,8 @@
 import './index';
-import '../../template'; // eslint-disable-line import/no-unresolved
 
 describe('Directive - Breadcrumbs', () => {
   // List of modules to include
-  const modules = ['templates', 'breadcrumbsModule'];
+  const modules = ['breadcrumbsModule'];
   modules.forEach((el) => {
     beforeEach(angular.mock.module(el)); // eslint-disable-line
   });
@@ -17,8 +16,8 @@ describe('Directive - Breadcrumbs', () => {
     scope = rootScope.$new();
   };
 
-  function getCompiledElement(lst) {
-    scope.breadcrumbList = lst || [{ displayName: 'Home' }];
+  function getCompiledElement(lst = [{ displayName: 'Home' }]) {
+    scope.breadcrumbList = lst;
     let element = '<breadcrumbs breadcrumb-list="breadcrumbList"></breadcrumbs>';
     element = compile(element)(scope);
     scope.$digest();
@@ -31,6 +30,7 @@ describe('Directive - Breadcrumbs', () => {
 
   it('Component by default should render one breadcrumb with text Home', () => {
     const component = getCompiledElement();
+    console.log('component1 txt', component.text())
     const txt = component.text().replace(/\n|\r/g, ' ').replace(/\s\s+/g, ' ').trim();
     expect(component.html()).toMatchSnapshot();
     expect(txt).toBe('Home');
@@ -38,6 +38,7 @@ describe('Directive - Breadcrumbs', () => {
 
   it('Creating a whole new breadcrumb with Test 1 and Test 2 should render both', () => {
     const component = getCompiledElement([{ displayName: 'Test 1', href: 'http://google.com/' }, { displayName: 'Test 2', href: 'http://google.com/' }]);
+    console.log('component txt', JSON.stringify(component.html()));
     const txt = component.text().replace(/\n|\r/g, ' ').replace(/\s\s+/g, ' ').trim();
     expect(component.html()).toMatchSnapshot();
     expect(txt).toBe('Test 1 Test 1 Test 2');
