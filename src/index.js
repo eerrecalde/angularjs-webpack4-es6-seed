@@ -5,8 +5,6 @@ import components from './components/index';
 import './template';
 import './index.scss';
 
-console.log('~~~~ components:', components);
-
 // Create and bootstrap application
 const requires = [
   'templates',

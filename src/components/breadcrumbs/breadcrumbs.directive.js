@@ -39,7 +39,7 @@ export default function breadcrumbs() {
   const bc = {};
 
   bc.restrict = 'E';
-  bc.template = require('./breadcrumbs.tpl.html');
+  bc.templateUrl = 'components/breadcrumbs/breadcrumbs.tpl.html';
   bc.scope = {
     breadcrumbList: '=',
   };

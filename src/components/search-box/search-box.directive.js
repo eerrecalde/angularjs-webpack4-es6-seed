@@ -47,7 +47,7 @@ export default function searchBox() {
     onChange: '&',
     searchValue: '=',
   };
-  sb.template = require('./search-box.tpl.html');
+  sb.templateUrl = '/components/search-box/search-box.tpl.html';
 
   /* eslint-disable no-param-reassign */
   sb.link = (scope) => {
