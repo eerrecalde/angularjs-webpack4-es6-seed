@@ -41,7 +41,7 @@ export default function breadcrumbs() {
   const bc = {};
 
   bc.restrict = 'E';
-  bc.template = tpl + '';
+  bc.template = tpl;
   bc.scope = {
     breadcrumbList: '=',
   };
