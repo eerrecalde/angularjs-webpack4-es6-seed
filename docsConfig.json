@@ -1,5 +1,0 @@
-{ 
-	"outputDir": "./docs/",
-	"contentDir": "./node_modules/",
-	"apiDir": "./src/"
-}

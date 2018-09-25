@@ -1,9 +1,8 @@
 import './index';
-import '../../template'; // eslint-disable-line import/no-unresolved
 
 describe('Directive - Breadcrumbs', () => {
   // List of modules to include
-  const modules = ['templates', 'breadcrumbsModule'];
+  const modules = ['breadcrumbsModule'];
   modules.forEach((el) => {
     beforeEach(angular.mock.module(el)); // eslint-disable-line
   });

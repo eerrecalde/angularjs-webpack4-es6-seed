@@ -39,6 +39,8 @@
  * </example>
  */
 
+import tpl from './search-box.tpl.html';
+
 export default function searchBox() {
   const sb = {};
   sb.restrict = 'E';
@@ -47,7 +49,7 @@ export default function searchBox() {
     onChange: '&',
     searchValue: '=',
   };
-  sb.templateUrl = '/components/search-box/search-box.tpl.html';
+  sb.template = tpl;
 
   /* eslint-disable no-param-reassign */
   sb.link = (scope) => {

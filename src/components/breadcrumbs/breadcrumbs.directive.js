@@ -35,11 +35,13 @@
  * </example>
  */
 
+import tpl from './breadcrumbs.tpl.html';
+
 export default function breadcrumbs() {
   const bc = {};
 
   bc.restrict = 'E';
-  bc.templateUrl = 'components/breadcrumbs/breadcrumbs.tpl.html';
+  bc.template = tpl + '';
   bc.scope = {
     breadcrumbList: '=',
   };
@@ -47,7 +49,6 @@ export default function breadcrumbs() {
   /* eslint-disable no-param-reassign */
   bc.link = (scope) => {
     scope.breadcrumbs = scope.breadcrumbList || [];
-
     scope.$watch('breadcrumbList', (nv) => {
       scope.breadcrumbs = nv || [];
     });

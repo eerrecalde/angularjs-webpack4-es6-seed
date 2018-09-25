@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path'); // eslint-disable-line
 
 module.exports = () => ({
   devtool: "source-map",

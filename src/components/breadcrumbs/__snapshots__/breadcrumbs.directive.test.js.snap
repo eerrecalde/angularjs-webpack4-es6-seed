@@ -8,7 +8,8 @@ exports[`Directive - Breadcrumbs Component by default should render one breadcru
       <span ng-show=\\"$last\\" class=\\"ng-binding\\">Home</span>
     </li><!-- end ngRepeat: crumb in breadcrumbs -->
   </ol>
-</nav>"
+</nav>
+"
 `;
 
 exports[`Directive - Breadcrumbs Creating a whole new breadcrumb with Test 1 and Test 2 should render both 1`] = `
@@ -22,5 +23,6 @@ exports[`Directive - Breadcrumbs Creating a whole new breadcrumb with Test 1 and
       <span ng-show=\\"$last\\" class=\\"ng-binding\\">Test 2</span>
     </li><!-- end ngRepeat: crumb in breadcrumbs -->
   </ol>
-</nav>"
+</nav>
+"
 `;
